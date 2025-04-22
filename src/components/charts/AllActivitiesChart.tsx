@@ -3,8 +3,7 @@ import Chart from "react-apexcharts";
 import React from "react";
 
 const AllActivitiesChart = () => {
-    const [state, setState] = React.useState({
-
+    const [state] = React.useState({
         series: [{
             name: "درخواست",
             data: [10, 41, 35, 51, 49, 62, 69, 91, 148 , 0 , 0 ,0 ,0]
@@ -38,6 +37,7 @@ const AllActivitiesChart = () => {
 
     });
 
+    // @ts-ignore
     return <Chart options={state.options} series={state.series} type="area" height={200} />
 };
 export default AllActivitiesChart;
